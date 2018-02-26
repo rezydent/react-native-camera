@@ -72,7 +72,8 @@ export default class Camera extends Component {
   };
 
   static propTypes = {
-    ...ViewPropTypes,
+    ...(ViewPropTypes || {}),
+    ...(View.propTypes || {}),
     aspect: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
